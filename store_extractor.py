@@ -12,7 +12,7 @@ def add_date_components(df):
 
     df['year'] = df['date'].dt.year
     df['month'] = df['date'].dt.month
-    df['week'] = df['date'].dt.weekÒ
+    df['week'] = df['date'].dt.week
 
     return df
 
@@ -22,13 +22,13 @@ pytrends = TrendReq(hl='en-US', tz=360, geo='ZA')
 area_codes = [
     'ZA',
     'ZA-EC',
-    'ZA-FS',
+    # 'ZA-FS',
     'ZA-GT',
     'ZA-NL',
-    'ZA-LP',
-    'ZA-MP',
-    'ZA-NW',
-    'ZA-NC',
+    # 'ZA-LP',
+    # 'ZA-MP',
+    # 'ZA-NW',
+    # 'ZA-NC',
     'ZA-WC'
 ]
 
@@ -68,7 +68,7 @@ vs_ok_overtime_results = []
 
 for idx, brand in enumerate(all_brands):
     print(brand)
-    if idx != 0 and idx % 5 == 0:
+    if idx != 0 and idx % 4 == 0:
         time.sleep(5 * 60)
     for area in area_codes:
         print(area)
